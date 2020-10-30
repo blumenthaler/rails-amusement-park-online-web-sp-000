@@ -1,0 +1,15 @@
+<% if flash[:message] %>
+    <h1><%= flash[:message] %></h1>
+<% end %>
+
+<h1>Hello <%= current_user.name %></h1>
+<p>Mood: <%= current_user.mood %></p>
+<p>Happiness: <%= current_user.happiness %></p>
+<p>Nausea: <%= current_user.nausea %></p>
+<p>Height: <%= current_user.height %> in</p>
+<p>Tickets: <%= current_user.tickets %></p>
+<% if current_user.admin %>
+    <p><%= "ADMIN" %></p>
+<%end%>
+
+ 
